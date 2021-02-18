@@ -1,0 +1,52 @@
+.searchBar {
+  display: inline-flex;
+  border-radius: 8px
+}
+
+section.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
+}
+
+.info {
+  display: inline-block;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding: 1rem;
+  font-size: .8rem;
+  color: #F0EEFF;
+  border-radius: 9999rem;
+  background-color: rgba(90, 79, 207, 0.3);
+}
+
+.info .highlight {
+  display: inline-block;
+  font-size: .7rem;
+  color: #F0EEFF;
+  margin: 0 .25rem;
+  padding: .25rem .55rem .25rem .55rem;
+  border-radius: 9999rem;
+  background-color: #5A4FCF;
+}
+
+h1.loading {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  section.center {
+    min-height: 180px;
+  }
+}

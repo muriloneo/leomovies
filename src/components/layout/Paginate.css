@@ -1,0 +1,15 @@
+.paginate {
+  display: flex;
+  justify-content: center; 
+  padding: 2rem;
+}
+.paginate button {
+  display: inline-block;
+  font-size: .7rem;
+  color: #F0EEFF;
+  margin: 0 .25rem;
+  padding: .5rem .75rem .5rem .75rem;
+  border-radius: 9999rem;
+  background-color: #5A4FCF;
+  border: none;
+}

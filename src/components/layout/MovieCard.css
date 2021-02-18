@@ -1,0 +1,102 @@
+.card {
+  padding: 2.5rem;
+  width: 100%;
+}
+
+.card figure {
+  display: block;
+  transition: all 300ms ease;
+  /* padding: 1.25rem; */
+  text-decoration: none;
+  border-radius: 8px;
+  color: #465966;
+  min-width: 300px;
+}
+
+.w-100pc {
+  width: 100% !important;
+}
+
+figure p {
+  color: #fff;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+figure .date {
+  font-style: italic;
+  font-size: .7rem !important;
+  color: #5A4FCF !important;
+}
+
+figure:hover, figure::before {
+  transform: scale(1.125);
+  background-color: rgba(240, 238, 255, 0.1) !important;
+}
+
+figure .img {
+  text-align: center;
+}
+
+figcaption {
+  color: green;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
+  -webkit-transition-delay: 100ms;
+  -moz-transition-delay: 100ms;
+  transition-delay: 100ms;
+  padding-top: 20px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 10px solid #fff;
+}
+
+figcaption p.name {
+  padding-bottom: 15px
+}
+
+figcaption i {
+  padding-bottom: 15px;
+}
+
+i.solid {
+  font-weight: bold;
+}
+
+figcaption .details {
+  position: absolute;
+  font-size: .7rem;
+  color: #F0EEFF;
+  padding: .5rem .75rem .5rem .75rem;
+  border-radius: 9999rem;
+  background-color: #5A4FCF;
+  border: none;
+  bottom: 80px;
+}
+
+figcaption .details i{
+  display: inline;
+  padding-right: .25rem;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 33.3333% !important;
+  }
+}

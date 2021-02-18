@@ -1,0 +1,26 @@
+.alert.alert-custom {
+  display: flex;
+  align-items: stretch;
+  padding: 1.5rem 2rem;
+}
+
+.alert.alert-warning {
+  background-color: #ffa800;
+  border-color: #ffa800;
+  color: #fff;
+}
+
+.alert.alert-custom .alert-icon {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem 0 0;
+}
+
+.alert.alert-custom .alert-text {
+  align-self: center;
+  flex-grow: 1;
+}
+
+.alert-text {
+  color: #181c32;
+}

@@ -1,0 +1,134 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  max-height: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: #fff;
+  background-color: #000;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+}
+
+a {
+  color: #465966;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button {
+  cursor: pointer;
+}
+
+img, video {
+  height: auto;
+  border-style: none;
+}
+
+.flex {
+  display: flex !important;
+}
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.justify-between {
+  flex: 1;
+  justify-content: space-between !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.no-underline, .hover-no-underline:hover {
+  text-decoration: none !important;
+}
+
+/* section {
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
+} */
+
+.input, .input-xs, .input-md, .input-lg {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #668295;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid #B7C4CD;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.input-lg {
+  height: calc(1.8rem + 1.25rem + 2px);
+  padding: 0.625rem calc(1.25rem + .5rem);
+  font-size: 1.2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  min-width: 25vw;
+  opacity: 0.8;
+  font-weight: 200;
+  font-size: .7rem;
+  color: #fff;
+  border-width: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: rgba(240,238,255,0.1);
+}
+
+.button, .button-xs, .button-md, .button-lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #566E7E;
+  border: 1px solid rgba(0,0,0,0);
+  border-radius: 4px;
+}
+
+.button-lg {
+  height: calc(1.8rem + 1.25rem + 2px);
+  padding: 0.625rem calc(1.25rem + 1.5rem);
+  font-size: 1.2rem;
+  margin-right: 0;
+  font-weight: 300;
+  font-size: .7rem;
+  color: #F0EEFF;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: rgba(240,238,255,0.2);
+}
+
+@media (max-width: 768px) {
+  .input-lg, .button-lg {
+    max-width: 60%;
+  }
+}
