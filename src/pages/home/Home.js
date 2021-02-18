@@ -39,7 +39,7 @@ export default function Home() {
     if (query) {
       searchMovies();
     }
-  }, [page, dispatch, query, searchMovies]);
+  }, [page]);
 
   const setInputQuery = (e) => {
     setQuery(e.target.value);
