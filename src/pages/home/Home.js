@@ -1,15 +1,17 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Info from '../../components/layout/Info';
 import MovieCard from '../../components/layout/MovieCard';
 import Paginate from '../../components/layout/Paginate';
 import SearchBar from '../../components/layout/SearchBar';
+import { scrollTop } from '../../helpers';
 import { loadGenres } from '../../redux/actions/genreActions';
 import MovieService from '../../services/MovieService';
 import './Home.css';
 
 export default function Home() {
 
+  const isFirstRun = useRef(true);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
   const [result, setResult] = useState({});
@@ -26,7 +28,7 @@ export default function Home() {
       setResult(movies);
       setFetching(false);
     },
-    [page, query],
+    [query, page],
   )
 
   useEffect(() => {
@@ -36,9 +38,11 @@ export default function Home() {
   }, [dispatch, genres])
 
   useEffect(() => {
-    if (query) {
-      searchMovies();
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
     }
+    searchMovies();
   }, [page]);
 
   const setInputQuery = (e) => {
@@ -51,15 +55,6 @@ export default function Home() {
     if (query.trim()) {
       searchMovies();
     }
-  }
-
-
-
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
   }
 
   const changePage = (action) => {
