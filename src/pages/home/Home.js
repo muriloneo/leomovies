@@ -43,6 +43,7 @@ export default function Home() {
       return;
     }
     searchMovies();
+    // eslint-disable-next-line
   }, [page]);
 
   const setInputQuery = (e) => {
